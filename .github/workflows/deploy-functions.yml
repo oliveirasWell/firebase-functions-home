@@ -19,7 +19,7 @@ jobs:
         run: yarn global add firebase-tools eslint
 
       - name: Install
-        run: yarn install
+        run: cd functions && yarn install
 
       - name: Deploy to Firebase
         run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }} --only functions
