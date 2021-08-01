@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Install firebase
-        run: yarn global install firebase-tools
+        run: yarn global add firebase-tools
 
       - name: Install
         run: yarn install
