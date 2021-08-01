@@ -8,8 +8,15 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '10'
+
       - name: Check out code
         uses: actions/checkout@master
+
+      - name: Install firebase
+        run: yarn global install firebase-tools
 
       - name: Install
         run: yarn install
